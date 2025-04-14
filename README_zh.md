@@ -2,7 +2,7 @@
 
 AI Town是一个交互式3D模拟游戏，您可以在其中建造和管理自己的未来主义小镇，并与AI驱动的角色互动。建造建筑、管理资源，并与AI角色交流，发展您繁荣的社区。
 
-![AI Town 截图](/placeholder.svg?height=400&width=800)
+<img width="1059" alt="Screenshot 2025-04-14 at 1 16 13 PM" src="https://github.com/user-attachments/assets/54a5b168-2fd8-4cfa-aef1-6a538b9c3cbd" />
 
 ## 功能特点
 
