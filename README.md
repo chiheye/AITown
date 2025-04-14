@@ -33,7 +33,7 @@ AI Town is an interactive 3D simulation game where you can build and manage your
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ai-town.git
+   git clone https://github.com/chiheye/AITown.git
    cd ai-town
    ```
 
