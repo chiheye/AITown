@@ -39,14 +39,14 @@ AI Town is an interactive 3D simulation game where you can build and manage your
 2. Install dependencies:
    \`\`\`bash
    npm install
-   # or
+   
    yarn install
    \`\`\`
 
 3. Start the development server:
    \`\`\`bash
    npm run dev
-   # or
+   
    yarn dev
    \`\`\`
 
@@ -86,7 +86,7 @@ You can use the built-in mock mode if you don't have an API key, which provides 
 
 ## Project Structure
 
-\`\`\`
+```
 ai-town/
 ├── app/                  # Next.js app directory
 ├── components/           # React components
@@ -99,7 +99,7 @@ ai-town/
 └── public/               # Static assets
     ├── models/           # 3D models
     └── textures/         # Textures for 3D models
-\`\`\`
+```
 
 ## Contributing
 
