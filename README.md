@@ -39,16 +39,12 @@ AI Town is an interactive 3D simulation game where you can build and manage your
 
 2. Install dependencies:
    ```bash
-   npm install
-   
-   yarn install
+   pnpm i
    ```
 
 3. Start the development server:
    ```bash
-   npm run dev
-   
-   yarn dev
+   pnpm dev
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.

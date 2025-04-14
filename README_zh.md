@@ -38,16 +38,12 @@ AI Town是一个交互式3D模拟游戏，您可以在其中建造和管理自�
 
 2. 安装依赖：
    ```bash
-   npm install
-   
-   yarn install
+   pnpm i
    ```
 
 3. 启动开发服务器：
    ```bash
-   npm run dev
-   
-   yarn dev
+   pnpm dev
    ```
 
 4. 在浏览器中打开[http://localhost:3000](http://localhost:3000)查看应用程序。
