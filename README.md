@@ -2,7 +2,8 @@
 
 AI Town is an interactive 3D simulation game where you can build and manage your own futuristic town with AI-powered interactions. Construct buildings, manage resources, and communicate with AI characters to develop your thriving community.
 
-![AI Town Screenshot](/placeholder.svg?height=400&width=800)
+<img width="1059" alt="Screenshot 2025-04-14 at 1 16 13 PM" src="https://github.com/user-attachments/assets/54a5b168-2fd8-4cfa-aef1-6a538b9c3cbd" />
+
 
 ## Features
 
