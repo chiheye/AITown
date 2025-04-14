@@ -86,7 +86,7 @@ AI Town支持与大型语言模型（LLM）集成，以实现更高级的AI互�
 
 ## 项目结构
 
-\`\`\`
+```
 ai-town/
 ├── app/                  # Next.js应用目录
 ├── components/           # React组件
@@ -99,7 +99,7 @@ ai-town/
 └── public/               # 静态资源
     ├── models/           # 3D模型
     └── textures/         # 3D模型纹理
-\`\`\`
+```
 
 ## 贡献
 
