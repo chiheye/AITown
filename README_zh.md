@@ -31,24 +31,24 @@ AI Town是一个交互式3D模拟游戏，您可以在其中建造和管理自�
 ### 安装
 
 1. 克隆仓库：
-   \`\`\`bash
-   git clone https://github.com/yourusername/ai-town.git
+   ```bash
+   git clone https://github.com/chiheye/AITown.git
    cd ai-town
-   \`\`\`
+   ```
 
 2. 安装依赖：
-   \`\`\`bash
+   ```bash
    npm install
    
    yarn install
-   \`\`\`
+   ```
 
 3. 启动开发服务器：
-   \`\`\`bash
+   ```bash
    npm run dev
    
    yarn dev
-   \`\`\`
+   ```
 
 4. 在浏览器中打开[http://localhost:3000](http://localhost:3000)查看应用程序。
 
