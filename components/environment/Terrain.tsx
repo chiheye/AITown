@@ -1,18 +1,48 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, forwardRef, useImperativeHandle } from "react"
 import * as THREE from "three"
 import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise"
 
 interface TerrainProps {
   size?: number
-  height?: number
+  height?: number // Max noise height variation
   segments?: number
   scale?: number
 }
 
-export default function Terrain({ size = 500, height = 20, segments = 128, scale = 0.2 }: TerrainProps) {
+export interface TerrainHandle {
+  getHeightAt: (worldX: number, worldZ: number) => number | null
+}
+
+const Terrain = forwardRef<TerrainHandle, TerrainProps>(function Terrain(
+  { size = 500, height = 20, segments = 128, scale = 0.2 }: TerrainProps,
+  ref,
+) {
   const meshRef = useRef<THREE.Mesh>(null)
+
+  useImperativeHandle(ref, () => ({
+    getHeightAt: (worldX: number, worldZ: number) => {
+      if (!meshRef.current) {
+        console.warn("Attempted to get height before terrain mesh is ready.")
+        return null
+      }
+      const raycaster = new THREE.Raycaster()
+      // Using 100 as a sufficiently large Y value for the ray's origin,
+      // assuming terrain won't exceed this height.
+      const rayOrigin = new THREE.Vector3(worldX, 100, worldZ)
+      const rayDirection = new THREE.Vector3(0, -1, 0)
+      raycaster.set(rayOrigin, rayDirection)
+
+      const intersections = raycaster.intersectObject(meshRef.current)
+
+      if (intersections.length > 0) {
+        return intersections[0].point.y
+      }
+      // console.warn(`No terrain intersection found at (${worldX}, ${worldZ})`)
+      return null // No intersection found
+    },
+  }))
 
   // Generate heightmap
   const generateHeightmap = () => {
@@ -73,4 +103,6 @@ export default function Terrain({ size = 500, height = 20, segments = 128, scale
       <meshStandardMaterial vertexColors={true} roughness={0.8} metalness={0.1} />
     </mesh>
   )
-}
+})
+
+export default Terrain
